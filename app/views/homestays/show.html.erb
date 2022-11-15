@@ -15,10 +15,7 @@
         <%= @homestay.city %>
         <%= @homestay.address %> </h2>
       <h2>Type of accomodation: <%= @homestay.accomodation %>
-        <ul><% @homestay.optionals.each do |option|%>
-            <li><%= option %> </li>
-          <% end %>
-        </ul>
+        <h2><% @homestay.optionals %></h2>
         <p><%= @homestay.comments %></p>
       </div>
     </div>
@@ -35,6 +32,12 @@
             <h2> <%= @homestay.user.first_name %>
               <%= @homestay.user.last_name %>
             </h2>
+            <div class="card-family-description">
+              <h2> Age: <%= @homestay.user.age %> </h2>
+              <h2> <%= @homestay.user.gender %> </h2>
+              <p><%= @homestay.family_description %></p>
+              <p><%= @homestay.user.description %></p>
+            </div>
           </div>
         </div>
       </div>

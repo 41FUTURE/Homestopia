@@ -18,8 +18,8 @@ Booking.destroy_all
     password: "1234567890",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    age: [20..50].sample,
-    gender: "[male, female].sample",
+    age: rand(20..50).sample,
+    gender: ["male", "female"].sample,
     description: Faker::Lorem.sentence)
 end
 
