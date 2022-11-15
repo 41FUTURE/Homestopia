@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  background-image: url("/app/assets/images/family.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), asset-url("family.jpeg");
 }
 
 .banner h1 {
@@ -17,6 +17,6 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
