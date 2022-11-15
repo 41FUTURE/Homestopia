@@ -1,12 +1,25 @@
-<div class="container">
-    <h1>Familes</h1>
-    <p>Start your next adventure with...</p>
+<div class="main-container">
+  <div class="container">
+      <h1>Discover the best homestay experience for you!</h1>
+      <p>Start your next adventure with...</p>
+  </div>
+  <div class="filter">
+    <button>Filter</button>
+  </div>
 </div>
-<div class="container mt-4 text-center">
-  <div class="cards mt-3">
-    <% @homestays.each do |homestay|  %>
-      <%= link_to homestay_path(homestay), class:"text-decoration-none" do %>
-        <%= render 'homestay_card', homestay: homestay %>
+<div class="main-container">
+  <div class="container mt-3 text-center">
+    <div class="cards">
+      <% @homestays.each do |homestay|  %>
+        <%= link_to homestay_path(homestay), class:"text-decoration-none" do %>
+          <%= render 'homestay_card', homestay: homestay %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+  </div>
+  <div class="container mt-3">
+    <div id="map">
+     map
+    </div>
+  </div>
 </div>
