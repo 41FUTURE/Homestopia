@@ -34,7 +34,7 @@ puts "... created #{User.count} users."
   address: Faker::Address.street_address,
   country: Faker::Address.country,
   city: Faker::Address.city,
-  optionals: ["pets", "kids", "smoking"],
+  optionals: ["pets", "kids", "smoking"].samlpe(3),
   user: User.all.sample)
 end
 
