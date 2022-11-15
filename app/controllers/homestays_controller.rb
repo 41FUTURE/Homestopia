@@ -1,0 +1,2 @@
+class HomestaysController < ApplicationController
+end
