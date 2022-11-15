@@ -4,42 +4,46 @@
       <div class="home-maine-photo", style="background-image: url('https://www.multivu.com/players/English/8444753-hgtv-dream-home-2020/image/HGTVHero_1574114287394-HR.jpg');">
       </div>
       <div class="home-photos">
-        <div class="photo1", style="background-image: url(<#%= @homestay.photo.attached? ? cl_image_path(@homestay.photo.key) : https://m.economictimes.com/thumb/msid-83033066,width-1200,height-900,resizemode-4,imgsize-202355/home-loan-above-rs-30-lakh-to-rs-75-lakh.jpg %>
-          'http://cdn.home-designing.com/wp-content/uploads/2019/02/courtyard-design-2.jpg');"></div>
-        <div class="photo2", style="background-image: url(<#%= @homestay.photo.attached? ? cl_image_path(@homestay.photo.key) : https://m.economictimes.com/thumb/msid-83033066,width-1200,height-900,resizemode-4,imgsize-202355/home-loan-above-rs-30-lakh-to-rs-75-lakh.jpg %> 'https://www.homestratosphere.com/wp-content/uploads/2017/06/Large-bedroom-cathedral-ceiling-oct30.jpg');"></div>
-        <div class="photo3", style="background-image: url(<#%= @homestay.photo.attached? ? cl_image_path(@homestay.photo.key) : https://m.economictimes.com/thumb/msid-83033066,width-1200,height-900,resizemode-4,imgsize-202355/home-loan-above-rs-30-lakh-to-rs-75-lakh.jpg %> 'https://st.hzcdn.com/simgs/pictures/dining-rooms/holiday-home-in-kerala-humming-tree-img~6fc1cecb0ee354ea_14-1175-1-925df73.jpg');"></div>
+        <div class="photo", style="background-image: url('http://cdn.home-designing.com/wp-content/uploads/2019/02/courtyard-design-2.jpg');"></div>
+        <div class="photo", style="background-image: url('https://www.homestratosphere.com/wp-content/uploads/2017/06/Large-bedroom-cathedral-ceiling-oct30.jpg');"></div>
+        <div class="photo", style="background-image: url('https://st.hzcdn.com/simgs/pictures/dining-rooms/holiday-home-in-kerala-humming-tree-img~6fc1cecb0ee354ea_14-1175-1-925df73.jpg');"></div>
       </div>
     </div>
     <div class="card-home-description">
-      <h2> Location: <%= @homestay.country %>
-        <%= @homestay.city %>
+      <h2> Location: <%= @homestay.country %>,
+        <%= @homestay.city %>,
         <%= @homestay.address %> </h2>
-      <h2>Type of accomodation: <%= @homestay.accomodation %>
-        <h2><% @homestay.optionals %></h2>
-        <p><%= @homestay.comments %></p>
+      <div class="options">
+        <% @homestay.tag_list.each do |tag| %>
+          <p class="option"> <%= tag %> </p>
+        <% end %>
       </div>
-    </div>
-    <div class="card-owner-info">
-      <div class="card-booking-form">
-        <%# reder %>
-      </div>
-      <div class="card-owner-information">
-        <div class="card-photo-name">
-          <div class="user-avatar", style="background-image: url(<#%= @homestay.user.photo.attached? ? cl_image_path(@user.photo.key) : https://cdn1.vectorstock.com/i/1000x1000/38/10/solid-purple-gradient-user-icon-web-icon-vector-23623810.jpg %>
-            'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg');">
-          </div>
-          <div class="full-name">
-            <h2> <%= @homestay.user.first_name %>
-              <%= @homestay.user.last_name %>
-            </h2>
-            <div class="card-family-description">
-              <h2> Age: <%= @homestay.user.age %> </h2>
-              <h2> <%= @homestay.user.gender %> </h2>
-              <p><%= @homestay.family_description %></p>
-              <p><%= @homestay.user.description %></p>
-            </div>
-          </div>
-        </div>
+      <p><strong>Type of accomodation:</strong> <%= @homestay.accomodation %></p>
+      <div>
+        <p><strong>Small comments about our home:</strong> <%= @homestay.comments %></p>
       </div>
     </div>
   </div>
+  <div class="card-owner-info">
+    <div class="card-booking-form">
+      <%= render 'bookings/form', booking: @booking %>
+    </div>
+    <div class="card-owner-information">
+      <div class="card-photo-name">
+        <div class="user-avatar", style="background-image: url('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg');">
+        </div>
+        <div class="full-name">
+          <h2> <%= @homestay.user.first_name %>
+            <%= @homestay.user.last_name %>
+          </div>
+        </div>
+      </h2>
+      <div class="card-family-description">
+        <h2><strong> Age:</strong> <%= @homestay.user.age %> </h2>
+        <p><strong>Gender:</strong>  <%= @homestay.user.gender %> </p>
+        <p><strong>Small story about our family:</strong> <%= @homestay.family_description %></p>
+        <p><strong>About myself: </strong><%= @homestay.user.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
