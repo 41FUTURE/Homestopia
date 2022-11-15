@@ -1,9 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :homestay
-  validates :start_date, presence: true
-  validates :end_date, presence: true
-  validate :user_is_not_homestay_owner
-  validate :user_is_not_already_booked
-  validate :homestay_available
+  validates :booking_start, presence: true
+  validates :booking_end, presence: true
 end
