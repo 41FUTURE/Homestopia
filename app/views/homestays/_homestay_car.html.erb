@@ -1,0 +1,13 @@
+<div class="card-trip">
+   <img src=<%=movie.poster_url%> alt="movie poster">
+  <div class="card-trip-infos">
+    <%= link_to bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: "Delete #{movie.title}?" }, class: 'card-remove-link text-decoration-none' do %>
+    　　<i class="fa-solid fa-trash-can"></i>
+  　<% end %>
+    <div>
+      <h2><%= movie.title%></h2>
+      <p><%= movie.overview %></p>
+    </div>
+    <h2 class="card-trip-pricing">Rating: <%= movie.rating %> </h2>
+  </div>
+</div>
