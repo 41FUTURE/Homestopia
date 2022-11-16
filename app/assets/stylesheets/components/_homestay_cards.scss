@@ -64,7 +64,7 @@
 
 .bottom-left {
   position: absolute;
-  bottom: 8px;
+  bottom: 16px;
   left: 16px;
 }
 
@@ -89,18 +89,8 @@
 
 .card-homestay .card-homestay-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   position: relative;
-}
-
-.card-homestay-infos .card-homestay-user {
-  position: relative;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-  color: black;
+  text-align: left;
 }
 
 .resize-img {
