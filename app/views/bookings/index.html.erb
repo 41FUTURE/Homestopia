@@ -1,24 +1,22 @@
-<div class="d-flex flex-column justify-content-between" style="min-height: 100vh;">
+<div class="d-flex flex-column justify-content-between margin-left-3" style="min-height: 100vh;">
   <div>
     <div>
       <h3>Upcoming Trips 🎉</h3>
     </div>
-    <div class="cards">
+    <div class="card-booking">
       <% @bookings.each do |booking| %>
         <div class="card-product">
-          <img src="https://i.ibb.co/C8jn6Np/8ed47c5c-e6cd-46a5-98ad-530a6e3bc404.webp" />
+          <img src= <%= booking.homestay.img_url %>/>
           <div class="d-flex w-100 justify-content-between">
             <div class="card-product-infos">
               <h2><%= booking.user.last_name %> Family</h2>
-              <p><strong>Wadi Rum, Aqaba Governorate, Jordan</strong></p>
+              <p><strong><%= booking.homestay.city %>, <%= booking.homestay.country %></strong></p>
             </div>
             <div>
-              <%= link_to "Confirmed", "#", class: "btn btn-ghost disabled "%>
+              <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
             </div>
           </div>
         </div>
-        <h3>
-        </h3>
       <% end %>
     </div>
   </div>
