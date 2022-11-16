@@ -25,7 +25,7 @@ Homestay.destroy_all
 end
 
 puts "... created #{User.count} users."
-homes = ["https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+families = ["https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 "https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -43,8 +43,8 @@ homes = ["https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?aut
   country: Faker::Address.country,
   city: Faker::Address.city,
   user: User.all.sample,
-  tag_list: "Have kids",
-  img_url: homes.sample
+  tag_list: "No smoking",
+  img_url: families.sample
 )
 end
 
