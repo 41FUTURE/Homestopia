@@ -24,8 +24,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-
     params.require(:booking).permit(:user, :homestay, :status, :booking_end, :booking_start, :number_of_guests)
-
   end
 end

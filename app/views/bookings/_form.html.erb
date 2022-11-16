@@ -4,6 +4,7 @@
     <%= simple_form_for [@homestay, @booking] do |f| %>
       <%= f.input :booking_start, as: :date %>
       <%= f.input :booking_end, as: :date %>
+      <%= f.input :number_of_guests %>
       <%= f.submit 'Add', class: 'btn' %>
     <% end %>
   </div>
