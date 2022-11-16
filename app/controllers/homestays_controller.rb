@@ -8,5 +8,5 @@ class HomestaysController < ApplicationController
   def show
     @homestay = Homestay.find(params[:id])
     authorize @homestay
-   end
+  end
 end

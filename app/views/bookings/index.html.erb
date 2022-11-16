@@ -1,0 +1,37 @@
+<div class="d-flex flex-column justify-content-between" style="min-height: 100vh;">
+  <div>
+    <div>
+      <h3>Upcoming Trips 🎉</h3>
+    </div>
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+        <div class="card-product">
+          <img src="https://i.ibb.co/C8jn6Np/8ed47c5c-e6cd-46a5-98ad-530a6e3bc404.webp" />
+          <div class="d-flex w-100 justify-content-between">
+            <div class="card-product-infos">
+              <h2><%= booking.user.last_name %> Family</h2>
+              <p><strong>Wadi Rum, Aqaba Governorate, Jordan</strong></p>
+            </div>
+            <div>
+              <%= link_to "Confirmed", "#", class: "btn btn-ghost disabled "%>
+            </div>
+          </div>
+        </div>
+        <h3>
+        </h3>
+      <% end %>
+    </div>
+  </div>
+  <div class="d-flex flex-column justify-content-between" style="min-height: 100vh;">
+    <div>
+      <div>
+        <div class="footer">
+          <div class="footer-copyright">
+            copyright 2022<i class="fa-regular fa-copyright"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

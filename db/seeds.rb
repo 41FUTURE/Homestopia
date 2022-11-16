@@ -7,10 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Destroying all users..."
 User.destroy_all
-puts "Destroying all homestays..."
-Homestay.destroy_all
 puts "Destroying all bookings..."
 Booking.destroy_all
+puts "Destroying all homestays..."
+Homestay.destroy_all
 
 5.times do
   User.create!(
