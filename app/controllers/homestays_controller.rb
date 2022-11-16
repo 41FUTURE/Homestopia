@@ -9,4 +9,5 @@ class HomestaysController < ApplicationController
     @homestay = Homestay.find(params[:id])
     authorize @homestay
   end
+
 end
