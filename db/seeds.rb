@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Booking.destroy_all
 puts "Destroying all users..."
 User.destroy_all
 puts "Destroying all homestays..."
 Homestay.destroy_all
 puts "Destroying all bookings..."
-Booking.destroy_all
 
 5.times do
   User.create!(
@@ -18,8 +18,8 @@ Booking.destroy_all
     password: "1234567890",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    age: [20..50].sample,
-    gender: "[male, female].sample",
+    age: rand(20..50),
+    gender: ["male", "female"].sample,
     description: Faker::Lorem.sentence)
 end
 
@@ -34,8 +34,8 @@ puts "... created #{User.count} users."
   address: Faker::Address.street_address,
   country: Faker::Address.country,
   city: Faker::Address.city,
-  optionals: ["pets", "kids", "smoking"],
-  user: User.all.sample)
+  user: User.all.sample,
+  tag_list: "Have kids")
 end
 
 puts "... created #{Homestay.count} homestays."
