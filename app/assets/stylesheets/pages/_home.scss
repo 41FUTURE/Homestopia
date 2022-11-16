@@ -21,25 +21,27 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.body {
+body {
   background-color: #A592CB;
 }
 
-.body h2 {
+body h2 {
   font-size: 32px;
   color: white;
 }
 
-.body p {
+body p {
   font-size: 20px;
   color: white;
 }
 
 #call_to_action {
-  border-radius: 5%;
-  width: 25%;
   left: 0;
-  height: 50px;
   background-color: #A592CB;
   color: white;
+  font-weight: bold;
+}
+
+#call_to_action a {
+  size: 1rem;
 }
