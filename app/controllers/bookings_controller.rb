@@ -17,9 +17,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     @booking.homestay = Homestay.find(params[:homestay_id])
-
     if @booking.save
-      redirect_to homestay_path
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,6 +27,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:homestay).permit(:user, :homestay, :status, :booking_end, :booking_start, :number_of_guests)
+    params.require(:booking).permit(:booking_end, :booking_start, :number_of_guests)
   end
 end
