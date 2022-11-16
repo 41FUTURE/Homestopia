@@ -1,7 +1,7 @@
 <div class="container-show">
   <div class="card-home-info">
     <div class="card-home-photos">
-      <div class="home-maine-photo", style="background-image: url('https://www.multivu.com/players/English/8444753-hgtv-dream-home-2020/image/HGTVHero_1574114287394-HR.jpg');">
+      <div class="home-maine-photo", style="background-image: url(<%= @homestay.img_url %>);">
       </div>
       <div class="home-photos">
         <div class="photo", style="background-image: url('http://cdn.home-designing.com/wp-content/uploads/2019/02/courtyard-design-2.jpg');"></div>
@@ -26,11 +26,11 @@
   </div>
   <div class="card-owner-info">
     <div class="card-booking-form">
-      <%= render 'bookings/form', booking: @booking %>
+      <%= render 'bookings/form',homestay: @homestay,booking: @booking  %>
     </div>
     <div class="card-owner-information">
       <div class="card-photo-name">
-        <div class="user-avatar", style="background-image: url('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg');">
+        <div class="user-avatar", style="background-image: url('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg');">
         </div>
         <div class="full-name">
           <h2> <%= @homestay.user.first_name %>

@@ -7,11 +7,15 @@
   background-color: #A592CB;
 }
 
+.btn {
+  color: white;
+}
+
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #cfb6ff;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 64px;
   font-weight: bold;
 }
 
@@ -28,7 +32,7 @@
 
 #home-body  h2 {
   font-size: 32px;
-  color: white;
+  color: #cfb6ff;
 }
 
 #home-body  p {
@@ -36,14 +40,14 @@
   color: white;
 }
 
-#call_to_action {
+.call_to_action {
   left: 0;
   background-color: #A592CB;
   color: white;
   font-weight: bold;
 }
 
-#call_to_action a {
+.call_to_action a {
   size: 1rem;
 }
 
