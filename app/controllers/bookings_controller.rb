@@ -4,17 +4,19 @@ class BookingsController < ApplicationController
     raise
   end
 
+  def new
+    @booking = Booking.new
+    @user = User.new
+    @homestay = Homestay.new
+  end
+
   def create
-<<<<<<< Updated upstream
-    @booking = Booking.find(params[:id])
-    authorize @booking
-=======
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.homestay = Homestay.find(params[:homestay_id])
 
     authorize @booking
-    raise
+
     if @booking.save
       redirect_to bookings_path
     else
@@ -26,6 +28,6 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:user, :homestay, :status, :booking_end, :booking_start, :number_of_guests)
->>>>>>> Stashed changes
+
   end
 end

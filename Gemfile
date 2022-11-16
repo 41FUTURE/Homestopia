@@ -47,8 +47,12 @@ gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+gem 'acts-as-taggable-on', '~> 9.0'
 gem "autoprefixer-rails"
+gem 'bootstrap', '~> 5.0.2'
+gem "cloudinary"
 gem "devise"
+gem "dotenv-rails", groups: [:development, :test]
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem "font-awesome-sass", "~> 6.1"
 gem "pundit"

@@ -6,6 +6,7 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.date :booking_start
       t.date :booking_end
       t.string :status
+      t.integer :number_of_guests
 
       t.timestamps
     end
