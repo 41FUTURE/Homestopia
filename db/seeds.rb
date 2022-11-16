@@ -25,15 +25,16 @@ Homestay.destroy_all
 end
 
 puts "... created #{User.count} users."
-homes = ["https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg",
-"https://www.mydomaine.com/thmb/dke2LC6lH21Pvqwd2lI6AIutnDY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SuCasaDesign-Modern-9335be77ca0446c7883c5cf8d974e47c.jpg",
-"https://boldliving.com.au/app/uploads/2022/07/Home-Designs.jpg",
-"https://hensleyhomes.com/wp-content/uploads/2021/11/Goetsch-Custom-Home-Gallery-Photo-17.jpeg",
-"https://cdn.vox-cdn.com/thumbor/GmlWD80P2S73aw8vvtJgPeKMeuk=/0x0:660x440/1200x800/filters:focal(278x168:382x272)/cdn.vox-cdn.com/uploads/chorus_image/image/61206839/salon-moderne-parisien_5399603.0.1449866718.0.jpg",
-"https://images.adsttc.com/media/images/5cd9/89f6/284d/d171/9e00/0028/newsletter/FEATURE-_A6A_RAZE_006.jpg?1557760491",
-"https://d6644ef6a12fcfb82f3f-5d6761b1e7eae8e264ad220502fbb6f0.ssl.cf5.rackcdn.com/a1c0b876-61e6-4ec3-8c05-ca96ca60e2d1/images/pickaflatphoto2.jpg"]
+homes = ["https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/4205505/pexels-photo-4205505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/6530679/pexels-photo-6530679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/7728916/pexels-photo-7728916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
 15.times do
-  Homestay.create!(number_of_users: rand(1..4),
+  Homestay.create!(
+  number_of_users: rand(1..4),
   comments: "Best home", price: rand(20..50),
   availability: true,
   family_description: Faker::Lorem.sentence,
