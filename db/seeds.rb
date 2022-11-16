@@ -30,7 +30,7 @@ puts "... created #{User.count} users."
   comments: "Best home", price: rand(20..50),
   availability: true,
   family_description: Faker::Lorem.sentence,
-  accomodation: ["apartment", "home"].sample,
+  accomodation: ["apartment", "house"].sample,
   address: Faker::Address.street_address,
   country: Faker::Address.country,
   city: Faker::Address.city,
