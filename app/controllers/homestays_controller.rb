@@ -8,5 +8,10 @@ class HomestaysController < ApplicationController
   def show
     @homestay = Homestay.find(params[:id])
     authorize @homestay
+    @booking = Booking.new
+  end
+
+  def user_params
+    params.require(:homestay).permit(:name, :tag_list, :number_of_users, :comments, :price, :availability, :family_description, :accomodation, :address, :country, :city, :user)
   end
 end
