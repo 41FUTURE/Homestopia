@@ -1,0 +1,11 @@
+<div class="f-container">
+  <div class="form-container mt-3">
+    <h1>Book home</h1>
+    <%= simple_form_for @booking do |f| %>
+      <%= f.input :booking_start, as: :date %>
+      <%= f.input :booking_end, as: :date %>
+      <%= f.input :number_of_guests %>
+      <%= f.submit 'Add', class: 'btn' %>
+    <% end %>
+  </div>
+</div>
