@@ -51,6 +51,7 @@ gem 'acts-as-taggable-on', '~> 9.0'
 gem "autoprefixer-rails"
 gem 'bootstrap', '~> 5.0.2'
 gem "devise"
+gem "dotenv-rails", groups: [:development, :test]
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem "font-awesome-sass", "~> 6.1"
 gem "pundit"
