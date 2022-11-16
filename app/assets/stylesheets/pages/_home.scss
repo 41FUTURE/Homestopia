@@ -7,6 +7,10 @@
   background-color: #A592CB;
 }
 
+.btn {
+  color: white;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
@@ -36,14 +40,14 @@
   color: white;
 }
 
-#call_to_action {
+.call_to_action {
   left: 0;
   background-color: #A592CB;
   color: white;
   font-weight: bold;
 }
 
-#call_to_action a {
+.call_to_action a {
   size: 1rem;
 }
 
