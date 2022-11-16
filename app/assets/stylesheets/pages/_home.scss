@@ -4,6 +4,7 @@
   background-position: center;
   padding: 300px 0;
   background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), asset-url("family.jpeg");
+  background-color: #A592CB;
 }
 
 .banner h1 {
@@ -21,16 +22,16 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-body {
+#home-body {
   background-color: #A592CB;
 }
 
-body h2 {
+#home-body  h2 {
   font-size: 32px;
   color: white;
 }
 
-body p {
+#home-body  p {
   font-size: 20px;
   color: white;
 }
@@ -44,4 +45,8 @@ body p {
 
 #call_to_action a {
   size: 1rem;
+}
+
+#carousel {
+  background-color: #A592CB;
 }

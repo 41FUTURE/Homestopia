@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Booking.destroy_all
 puts "Destroying all users..."
 User.destroy_all
+puts "Destroying all bookings..."
+Booking.destroy_all
 puts "Destroying all homestays..."
 Homestay.destroy_all
-puts "Destroying all bookings..."
+
 
 5.times do
   User.create!(
@@ -24,9 +25,16 @@ puts "Destroying all bookings..."
 end
 
 puts "... created #{User.count} users."
-
+homes = ["https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/4205505/pexels-photo-4205505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/6530679/pexels-photo-6530679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+"https://images.pexels.com/photos/7728916/pexels-photo-7728916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
 15.times do
-  Homestay.create!(number_of_users: rand(1..4),
+  Homestay.create!(
+  number_of_users: rand(1..4),
   comments: "Best home", price: rand(20..50),
   availability: true,
   family_description: Faker::Lorem.sentence,
@@ -35,7 +43,9 @@ puts "... created #{User.count} users."
   country: Faker::Address.country,
   city: Faker::Address.city,
   user: User.all.sample,
-  tag_list: "Have kids")
+  tag_list: "Have kids",
+  img_url: homes.sample
+)
 end
 
 puts "... created #{Homestay.count} homestays."
