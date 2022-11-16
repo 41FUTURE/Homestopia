@@ -2,6 +2,7 @@ class HomestaysController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
+    @homestays = Homestay.all
     @homestays = policy_scope(Homestay)
   end
 

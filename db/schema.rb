@@ -20,7 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_080922) do
     t.date "booking_start"
     t.date "booking_end"
     t.string "status"
-    t.integer "number_of_guests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["homestay_id"], name: "index_bookings_on_homestay_id"
@@ -36,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_080922) do
     t.string "accomodation"
     t.string "address"
     t.boolean "availability"
+    t.string "optionals"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "country"

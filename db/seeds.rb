@@ -26,7 +26,8 @@ end
 puts "... created #{User.count} users."
 
 15.times do
-  Homestay.create!(number_of_users: rand(1..4),
+  Homestay.create!(
+  number_of_users: rand(1..4),
   comments: "Best home", price: rand(20..50),
   availability: true,
   family_description: Faker::Lorem.sentence,
