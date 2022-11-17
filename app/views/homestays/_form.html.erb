@@ -8,7 +8,7 @@
     <%= f.input :comments %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :number_of_users %>
-    <%= f.input :tag_list, as: :check_boxes, collection: [ "No smoking", "Has Pets", "Has Kids", "No Pets", "No Kids" ] %>
+    <%= f.input :tag_list, as: :check_boxes, collection: [ "No Smoking",  "No Pets", "No Kids" "Has Pets", "Has Kids"] %>
     <%= f.submit 'Add' %>
   <% end %>
 </div>
