@@ -7,7 +7,7 @@
   </div>
   <div class="card-homestay-infos text-black">
     <h2>The <%= homestay.user.last_name %> Family</h2>
-    <p><%= homestay.family_description %></p>
+    <p><%= homestay.family_description.truncate(40) %></p>
     <div class="bottom-right">
       <p><b>$<%= homestay.price %></b></p>
     </div>
