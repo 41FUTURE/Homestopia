@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_many :homestays, dependent: :destroy
+
+  has_many :bookings_as_owner, through: :homestays, source: :bookings
   has_one_attached :photo
 end
