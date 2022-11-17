@@ -2,8 +2,11 @@ class HomestaysController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @homestays = Homestay.all
-    @homestays = policy_scope(Homestay)
+    if params[:query].present?
+      @homestays = policy_scope(Homestay).search_by_city_and_country(params[:query])
+    else
+      @homestays = policy_scope(Homestay)
+    end
   end
 
   def show
