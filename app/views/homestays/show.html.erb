@@ -4,16 +4,14 @@
       <div class="home-maine-photo", style="background-image: url(<%=@homestay.photos.attached? ? cl_image_path(@homestay.photos.first.key) : @homestay.img_url %>);">
       </div>
       <div class="home-photos">
-        <div class="photo", style="background-image: url(
-          <% if @homestay.photos.attached? %>
-          <% @homestay.photos[1..-1].each do |photo| %>
-          <%= cl_image_path(photo.key) %>
-          <% end %>
+        <div class="photo">
+          <% if @homestay.photos.count > 1 %>
+            <% @homestay.photos[1..-1].each do |photo| %>
+              <%= cl_image_tag(photo.key) %>
+            <% end %>
           <% else %>
-          <%= 'https://media.istockphoto.com/id/155666671/vector/vector-illustration-of-red-house-icon.jpg?s=612x612&w=0&k=20&c=tBqaabvmjFOBVUibZxbd8oWJqrFR5dy-l2bEDJMtZ40='%>
-
-           <% end %>
-          );">
+            <%= image_tag('https://media.istockphoto.com/id/155666671/vector/vector-illustration-of-red-house-icon.jpg?s=612x612&w=0&k=20&c=tBqaabvmjFOBVUibZxbd8oWJqrFR5dy-l2bEDJMtZ40=')%>
+          <% end %>
         </div>
       </div>
     </div>
@@ -37,7 +35,7 @@
     </div>
     <div class="card-owner-information">
       <div class="card-photo-name">
-        <div class="user-avatar", style="background-image: url('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg');">
+        <div class="user-avatar", style="background-image: url(<%=@homestay.user.img_url %>);">
         </div>
         <div class="full-name">
           <h2> <%= @homestay.user.first_name %>
