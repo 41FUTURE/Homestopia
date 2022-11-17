@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   resources :homestays, only: %i[index show] do
     resources :bookings, only: :create
   end
+  namespace :owner do
+    resources :bookings, only: :index
+  end
   resources :bookings, only: :index
 end
