@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import ImageModalController from "./image_modal_controller"
+application.register("image-modal", ImageModalController)
