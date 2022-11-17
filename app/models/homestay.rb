@@ -16,6 +16,6 @@ class Homestay < ApplicationRecord
 
   validates :price, presence: true
   validates :address, presence: true
-  validates :accomodation, inclusion: { in: ["appartment", "house"] }
+  validates :accomodation, inclusion: { in: ["Apartment", "House"] }
   validates :number_of_users, presence: true, numericality: { less_than_or_equal_to: 4 }
 end

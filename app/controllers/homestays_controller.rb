@@ -31,20 +31,21 @@ class HomestaysController < ApplicationController
   end
 
   def create
-    @homestay = Booking.new(booking_params)
+    @homestay = Homestay.new(homestay_params)
     @homestay.user = current_user
     authorize @homestay
     if @homestay.save
-      redirect_to homestay_path(params[:id])
+      redirect_to homestays_path
     else
+      raise
       render :new, status: :unprocessable_entity
     end
   end
 
   private
 
-  def user_params
-    params.require(:homestay).permit(:name, :tag_list, :number_of_users, :comments, :price, :availability, :family_description, :accomodation, :address, :country, :city, :user)
+  def homestay_params
+    params.require(:homestay).permit(:name, :tag_list, :number_of_users, :comments, :price, :availability, :family_description, :accomodation, :address, photos: [])
   end
 
 end
