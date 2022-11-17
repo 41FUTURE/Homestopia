@@ -38,7 +38,7 @@ families = ["https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?
   comments: "Best home", price: rand(20..50),
   availability: true,
   family_description: Faker::Lorem.sentence,
-  accomodation: ["apartment", "house"].sample,
+  accomodation: ["Apartment", "House"].sample,
   address: Faker::Address.street_address,
   country: Faker::Address.country,
   city: Faker::Address.city,
