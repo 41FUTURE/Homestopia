@@ -1,8 +1,8 @@
 <body>
   <div class="d-flex flex-column justify-content-between margin-left-3" style="min-height: 100vh;">
     <div>
-      <div>
-        <h3>My Trips 🎉</h3>
+      <div class="mytrips">
+        <h3>Upcoming Trips🎉</h3>
       </div>
       <div class="card-booking">
         <% @bookings.each do |booking| %>
@@ -12,18 +12,16 @@
               <div class="card-product-infos">
                 <h2><%= booking.user.last_name %> Family</h2>
                 <p><strong><%= booking.homestay.city %>, <%= booking.homestay.country %></strong></p>
-                <a class="btn btn-flat disabled" href="#">pet friendly</a>
               </div>
               <div>
                 <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
-                <p><%= booking.booking_start %> </p>
               </div>
             </div>
           </div>
         <% end %>
       </div>
     </div>
-    <div class="d-flex flex-column justify-content-between" style="min-height: 10vh;">
+    <div class="d-flex flex-column justify-content-between" style="min-height: 5vh;">
       <div>
         <div>
         </div>
