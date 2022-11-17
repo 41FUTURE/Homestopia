@@ -4,7 +4,7 @@ class HomestaysController < ApplicationController
   def index
     @homestays =
       if params[:query].present?
-        policy_scope(Homestay).search_by_city_and_country(params[:query])
+        policy_scope(Homestay).search_by_address(params[:query])
       else
         policy_scope(Homestay)
       end

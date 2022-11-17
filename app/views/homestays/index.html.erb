@@ -1,31 +1,26 @@
-<div class="flex-container">
-  <div class="main-container">
-    <div class="container mt-3 text-justify">
-      <h1><b>Discover the best homestay experience for you!</b></h1>
+
+<div class="main-container container-map">
+  <div class="container mt-3 text-justify">
+    <div class="message ps-2 pb-3">
+      <h1><b>Discover the world!</b></h1>
       <p>Start your next adventure with...</p>
     </div>
-  <div class="main-container">
-      <div class="filter mt-3">
-        <%= render 'filter' %>
-      </div>
-  </div>
-  </div>
-  <div class="main-container container-map">
-    <div class="container mt-3 text-center">
-      <div class="cards">
-        <% @homestays.each do |homestay|  %>
-          <%= link_to homestay_path(homestay), class:"text-decoration-none" do %>
-            <%= render 'homestay_card', homestay: homestay %>
-          <% end %>
+    <div class="cards">
+      <% @homestays.each do |homestay|  %>
+        <%= link_to homestay_path(homestay), class:"text-decoration-none" do %>
+          <%= render 'homestay_card', homestay: homestay %>
         <% end %>
-      </div>
+      <% end %>
     </div>
-    <div class="container mt-3">
-      <div id="map"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+  </div>
+  <div class="container mt-4">
+    <div class="filter ps-2 pb-3">
+      <%= render 'filter' %>
+    </div>
+    <div id="map"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>
