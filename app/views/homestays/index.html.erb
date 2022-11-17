@@ -4,10 +4,11 @@
       <h1><b>Discover the best homestay experience for you!</b></h1>
       <p>Start your next adventure with...</p>
     </div>
-    <div class="filter mt-3">
-      <%= render 'filter' %>
-      <%# <button>Filter</button> %>
-    </div>
+  <div class="main-container">
+      <div class="filter mt-3">
+        <%= render 'filter' %>
+      </div>
+  </div>
   </div>
   <div class="main-container container-map">
     <div class="container mt-3 text-center">
@@ -20,7 +21,11 @@
       </div>
     </div>
     <div class="container mt-3">
-      <div id="map"></div>
+      <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
   </div>
 </div>

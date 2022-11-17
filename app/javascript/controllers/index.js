@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import ImageModalController from "./image_modal_controller"
 application.register("image-modal", ImageModalController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)

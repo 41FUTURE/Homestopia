@@ -2,10 +2,18 @@ class HomestaysController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    if params[:query].present?
-      @homestays = policy_scope(Homestay).search_by_city_and_country(params[:query])
-    else
-      @homestays = policy_scope(Homestay)
+    @homestays =
+      if params[:query].present?
+        policy_scope(Homestay).search_by_city_and_country(params[:query])
+      else
+        policy_scope(Homestay)
+      end
+
+    @markers = @homestays.geocoded.map do |homestay|
+      {
+        lat: homestay.latitude,
+        lng: homestay.longitude
+      }
     end
   end
 
