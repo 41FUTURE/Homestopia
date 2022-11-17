@@ -1,0 +1,19 @@
+<div class="f-container">
+  <div class="form-container-homestay mt-3">
+    <h1>Add new homeplace</h1>
+    <%= simple_form_for @homestay do |f| %>
+      <%= f.input :address %>
+      <%= f.input :city %>
+      <%#= f.input :country %>
+      <%= f.input :accomodation %>
+      <%= f.input :price %>
+      <%= f.input :family_description %>
+      <%= f.input :comments %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit 'Add', class: 'btn' %>
+    <% end %>
+  </div>
+</div>
