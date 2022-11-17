@@ -1,14 +1,15 @@
+<div class="flex-container">
   <div class="main-container">
     <div class="container mt-3 text-justify">
-        <h1><b>Discover the best homestay experience for you!</b></h1>
-        <p>Start your next adventure with...</p>
+      <h1><b>Discover the best homestay experience for you!</b></h1>
+      <p>Start your next adventure with...</p>
     </div>
     <div class="filter mt-3">
       <%= render 'filter' %>
       <%# <button>Filter</button> %>
     </div>
   </div>
-  <div class="main-container">
+  <div class="main-container container-map">
     <div class="container mt-3 text-center">
       <div class="cards">
         <% @homestays.each do |homestay|  %>
@@ -22,3 +23,4 @@
       <div id="map"></div>
     </div>
   </div>
+</div>
