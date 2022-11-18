@@ -12,7 +12,7 @@
 //   }
 // }
 
-// Medium devices (tablets, 768px and up)
+// // Medium devices (tablets, 768px and up)
 // @media (min-width: 768px) {
 //   .cards {
 //     grid-template-columns: 1fr 1fr;
@@ -20,7 +20,7 @@
 // }
 
 .card-homestay {
-  width: 320px;
+  width: 100%;
   overflow: hidden;
   background: rgb(250, 250, 250);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -83,4 +83,5 @@
   border-radius: 4px 4px 0px 0px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   transition: 0.5s;
+  width: 100%
 }

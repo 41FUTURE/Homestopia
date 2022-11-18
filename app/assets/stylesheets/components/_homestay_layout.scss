@@ -1,4 +1,4 @@
-.main-container {
+.homestays-container {
   display: flex;
   justify-content: space-between;
   margin: auto 100px;
@@ -11,7 +11,12 @@
 }
 
 @media  (max-width: 820px) {
-  .main-container {
+  .homestays-container {
     margin: auto 50px;
   }
+}
+
+.right-container {
+  position: sticky;
+  top: 4vh;
 }
