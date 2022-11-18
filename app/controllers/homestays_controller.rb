@@ -16,6 +16,7 @@ class HomestaysController < ApplicationController
       }
     end
 
+
     @tags = ActsAsTaggableOn::Tag.all
 
     @homestays = @homestays.tagged_with(params[:tags]) if params[:tags]&.any?
@@ -41,7 +42,6 @@ class HomestaysController < ApplicationController
     if @homestay.save
       redirect_to homestays_path
     else
-      raise
       render :new, status: :unprocessable_entity
     end
   end
