@@ -1,0 +1,121 @@
+.flip-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flip-card-title {
+  text-align: center;
+  padding: 1rem;
+  color: #cfb6ff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  border: 0.2rem solid #CFB6FF;
+  perspective: 1000px;
+  padding-top: 1rem;
+  margin: 1rem;
+  border-radius: 2%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.flip-card:hover {
+  .card-body {
+    visibility: hidden;
+  }
+}
+
+.card-body {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg");
+  background-size: cover;
+  background-color: transparent;
+  background-position: center;
+  transition: all 0.25s;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  position: relative;
+  height: 16rem;
+}
+
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #CFB6FF;
+  color: white;
+  transform: rotateY(180deg);
+  inset: 0;
+}
+
+.accept {
+  text-decoration: none;
+  background-color: greenyellow;
+  border-color: greenyellow;
+  color:white;
+  padding: 0.5rem;
+  border-radius: 5%;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+.decline {
+  text-decoration: none;
+  background-color: red;
+  border-color: red;
+  color:white;
+  padding: 0.5rem;
+  border-radius: 5%;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  position: absolute;
+  left: -15px;
+  bottom: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-font {
+  margin: -10px;
+  text-align: start;
+  color: white;
+  font-weight: bold;
+  opacity: 80%;
+}
+
+.booking-tag {
+  margin: 1px 0px;
+  padding: 10px 5px 10px 5px;
+  background-color: #CFB6FF;
+  color: white;
+  border-radius: 8px;
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: start;
+  text-justify: auto;
+}

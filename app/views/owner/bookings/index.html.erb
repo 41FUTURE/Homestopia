@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="flip-card-title">Possible Candidates</h1>
+  <div class="row flip-container">
+    <% @bookings.each do |booking| %>
+      <div class="card flip-card" style="width: 20rem;">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-img-overlay card-body">
+              <h3 class="card-font"><i class="fa-solid fa-rotate-left"></i></h3>
+              <h3 class="inner-card-content card-text" > <%= booking.user.first_name %> <%= booking.user.last_name %> </h3>
+            </div>
+          </div>
+          <div class="flip-card-back align-items-center d-flex justify-content-center">
+            <div class="booking-actions">
+              <% if booking.pending? %>
+                <%= simple_form_for bookings_path do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                  <%= f.submit 'Accept', class: 'btn btn-info accept' %>
+                <% end %>
+                <%= simple_form_for bookings_path do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                  <%= f.submit 'Reject', class: 'btn btn-light decline' %>
+                <% end %>
+              <% else %>
+                <p class='booking-tag'><%= booking.status %></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="card-border">
+          <p class="my-2 booking-tag">Status: <%= booking.status %></p>
+          <p class="my-2 booking-tag">Email: <%= booking.user.email %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
