@@ -87,8 +87,9 @@ User.create!(
 
 puts "... created #{User.count} users."
 
-tag = [ "No smoking", "Has Pets", "Has Kids", "No Pets", "No Kids"]
-  Homestay.create!(
+tag = ["No smoking", "Has Pets", "Has Kids", "No Pets", "No Kids"]
+
+Homestay.create!(
   number_of_users: rand(1..4),
   comments: "Escape the busy life and relax in the countryside. Our Friendly cows will meet you off your private back patio! This serene, private guest home on our family ranch. Enjoy our friendly farm animals, orchard, and seasonal garden. ",
   price: rand(10..50),
@@ -97,7 +98,7 @@ tag = [ "No smoking", "Has Pets", "Has Kids", "No Pets", "No Kids"]
   accomodation: ["Apartment", "House"].sample,
   address: "913-14 Jogasawa, Mutsu shi, Aomori ken, Japan",
   user: User.find(1),
-  tag_list: tag.sample,
+  tag_list: tag.sample(3),
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -111,7 +112,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "229-5 Higashimachi, Iwakura shi, Aichi ken, Japan",
   user: User.find(3),
-  tag_list: tag.sample,
+  tag_list: tag.sample(3),
   img_url: "https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -124,8 +125,8 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "695-16 Saidaiji gomyo, Okayama shi higashi ku, Okayama ken, Japan",
   user: User.find(4),
-  tag_list: tag.sample,
-  img_url: "https://t4.ftcdn.net/jpg/02/77/68/51/360_F_277685185_UAYxm224UPelni1rxsuAUZQbfhly0RpL.jpg"
+  tag_list: tag.sample(3),
+  img_url: "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
 
@@ -138,8 +139,8 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "626-6 Ogi, Kikuchi shi, Kumamoto ken, Japan",
   user: User.find(6),
-  tag_list: tag.sample,
-  img_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/winter-day-by-fireplace-royalty-free-image-1639519069.jpg"
+  tag_list: tag.sample(2),
+  img_url: "https://images.pexels.com/photos/6530679/pexels-photo-6530679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
 
@@ -152,7 +153,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "3-589-7 Kuminoki, Osakasayama shi, Osaka fu, Japan",
   user: User.find(7),
-  tag_list: tag.sample,
+  tag_list: tag.sample(2),
   img_url: "https://eriefamilycenter.org/wp-content/uploads/2017/08/two.jpg"
 )
 
@@ -165,7 +166,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "814-10 Kuchida, Chita gun taketoyo cho, Aichi ken, Japan",
   user: User.find(1),
-  tag_list: tag.sample,
+  tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -178,7 +179,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "833-18 Ishidamachi, Nobeoka shi, Miyazaki ken, Japan",
   user: User.find(2),
-  tag_list: tag.sample,
+  tag_list: tag.sample(1),
   img_url: "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -204,8 +205,8 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "29 Seel Street Liverpool L1 4AU England",
   user: User.find(5),
-  tag_list: tag.sample,
-  img_url: "https://cdn2.momjunction.com/wp-content/uploads/2019/09/151-Interesting-Would-You-Rather-Questions-For-Couples-2.jpg"
+  tag_list: tag.sample(2),
+  img_url: "https://images.pexels.com/photos/4205505/pexels-photo-4205505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 Homestay.create!(
   number_of_users: rand(1..4),
@@ -216,8 +217,8 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "464-18 Mitsuyamotocho, Nagahama shi, Shiga ken, Japan",
   user: User.find(4),
-  tag_list: tag.sample,
-  img_url: "https://t4.ftcdn.net/jpg/02/77/68/51/360_F_277685185_UAYxm224UPelni1rxsuAUZQbfhly0RpL.jpg"
+  tag_list: tag.sample(3),
+  img_url: "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
 Homestay.create!(
@@ -229,7 +230,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "1470 S Washington St, North Attleboro MA 2760",
   user: User.find(2),
-  tag_list: tag.sample,
+  tag_list: tag.sample(1),
   img_url: "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -243,8 +244,8 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "0 Soojian Dr, Leicester MA 1524",
   user: User.find(6),
-  tag_list: tag.sample,
-  img_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/winter-day-by-fireplace-royalty-free-image-1639519069.jpg"
+  tag_list: tag.sample(2),
+  img_url: "https://images.pexels.com/photos/6530679/pexels-photo-6530679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
 Homestay.create!(
@@ -256,7 +257,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "777 Brockton Avenue, Abington MA 2351",
   user: User.find(7),
-  tag_list: tag.sample,
+  tag_list: tag.sample(3),
   img_url: "https://eriefamilycenter.org/wp-content/uploads/2017/08/two.jpg"
 )
 
@@ -322,7 +323,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "838-14 Kumanogawacho nishi, Shingu shi, Wakayama ken, Japan",
   user: User.find(2),
-  tag_list: tag.sample,
+  tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -350,7 +351,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "989-8 Tomizawa, Soma shi, Fukushima ken, Japan",
   user: User.find(3),
-  tag_list: tag.sample,
+  tag_list: tag.sample(1),
   img_url: "https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
@@ -363,7 +364,7 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "Klewinowo 116, 16-061 Klewinowo, Poland",
   user: User.find(7),
-  tag_list: tag.sample,
+  tag_list: tag.sample(1),
   img_url: "https://eriefamilycenter.org/wp-content/uploads/2017/08/two.jpg"
 )
 
@@ -376,17 +377,18 @@ Homestay.create!(
   accomodation: ["Apartment", "House"].sample,
   address: "Fischerstrasse 33, 77977 Rust, Germany",
   user: User.find(1),
-  tag_list: tag.sample,
+  tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
 
 puts "... created #{Homestay.count} homestays."
 
 15.times do
-  Booking.create!(booking_start: Faker::Date.backward(days: 14),
-  booking_end: Date.today,
-  user: User.all.sample,
-  homestay: Homestay.all.sample)
+  Booking.create!(
+    booking_end: Faker::Date.forward(days: 23),
+    booking_start: Faker::Date.backward(days: 14),
+    user: User.all.sample,
+    homestay: Homestay.all.sample)
 end
 
 puts "... created #{Booking.count} booking."

@@ -6,39 +6,17 @@
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <%= form_tag method: :get, url: homestays_path do %>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-             No Smoking
-           </label>
-          </div>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-             No Pets
-           </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-             No Kids
-           </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-             Has Pets
-           </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-             Has Kids
-           </label>
-          </div>
-          <%= submit_tag 'Submit' %>
+      <div class="accordion-body bg-white">
+        <%= form_with method: :get, url: homestays_path do %>
+          <% @tags.each do |tag| %>
+            <div class="form-check">
+              <input name="tags[]" class="form-check-input" type="checkbox" value="<%= tag.name %>" id="flexCheckDefault" <%= "checked" if params[:tags]&.include?(tag.name) %>>
+              <label class="form-check-label" for="flexCheckDefault">
+                <%= tag.name %>
+            </label>
+            </div>
+          <% end %>
+          <%= submit_tag 'Submit', class:"btn btn-primary mt-2 justify-content center" %>
         <% end %>
       </div>
     </div>
