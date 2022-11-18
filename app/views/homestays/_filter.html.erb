@@ -1,6 +1,6 @@
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
-    <h2 class="accordion-header text-center" id="headingOne">
+    <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         Filters
       </button>
@@ -10,8 +10,8 @@
         <%= form_with method: :get, url: homestays_path do %>
           <% @tags.each do |tag| %>
             <div class="form-check">
-              <input name="tags[]" class="form-check-input" type="checkbox" value="<%= tag.name %>" id="flexCheckDefault" <%= "checked" if params[:tags]&.include?(tag.name) %>>
-              <label class="form-check-label" for="flexCheckDefault">
+              <input name="tags[]" class="form-check-input" type="checkbox" value="<%= tag.name %>" id="flexCheckDefault<%= tag.name %>" <%= "checked" if params[:tags]&.include?(tag.name) %>>
+              <label class="form-check-label" for="flexCheckDefault<%= tag.name %>">
                 <%= tag.name %>
             </label>
             </div>
