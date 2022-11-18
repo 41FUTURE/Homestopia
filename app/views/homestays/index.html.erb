@@ -1,5 +1,5 @@
 
-<div class="main-container container-map">
+<div class="homestays-container container-map">
   <div class="container mt-3 text-justify">
     <div class="message ps-2 pb-3">
       <h1><b>Discover the world!</b></h1>
@@ -14,13 +14,15 @@
     </div>
   </div>
   <div class="container mt-5">
-    <div class="filter px-4 pb-5">
-      <%= render 'filter' %>
-    </div>
-    <div id="map"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="right-container">
+      <div class="filter px-4 pb-5">
+        <%= render 'filter' %>
+      </div>
+      <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
   </div>
 </div>
