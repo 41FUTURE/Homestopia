@@ -3,6 +3,7 @@
     <div>
       <div class="mytrips">
         <h3>Upcoming Trips🎉</h3>
+
         <div class="card-booking">
           <% @bookings.each do |booking| %>
             <div class="card-product">
@@ -16,6 +17,7 @@
                 <div>
                   <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
                 </div>
+
               </div>
             </div>
           <% end %>
