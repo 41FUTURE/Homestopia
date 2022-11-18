@@ -15,6 +15,7 @@ class HomestaysController < ApplicationController
         lng: homestay.longitude
       }
     end
+    # @homestays = @homestay.where(tags.name: params[:year].to_i) if params[:year].present?
   end
 
   def show
@@ -37,7 +38,6 @@ class HomestaysController < ApplicationController
     if @homestay.save
       redirect_to homestays_path
     else
-      raise
       render :new, status: :unprocessable_entity
     end
   end
