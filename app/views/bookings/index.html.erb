@@ -1,9 +1,8 @@
-<body>
+<div class="home-page-centre">
   <div class="d-flex flex-column justify-content-between margin-left-3" style="min-height: 100vh;">
     <div>
       <div class="mytrips">
         <h3>Upcoming Trips🎉</h3>
-
         <div class="card-booking">
           <% @bookings.each do |booking| %>
             <div class="card-product">
@@ -14,10 +13,9 @@
                   <p><strong><%= booking.homestay.address %></strong></p>
                   <p><%= booking.booking_start %> - <%= booking.booking_end%></p>
                 </div>
-                <div>
+                <div >
                   <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
                 </div>
-
               </div>
             </div>
           <% end %>
@@ -31,4 +29,4 @@
       </div>
     </div>
   </div>
-</body>
+</div>
