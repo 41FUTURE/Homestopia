@@ -1,7 +1,7 @@
 <div class="form-container-homestay ">
   <h1>Add new homeplace</h1>
   <%= simple_form_for @homestay do |f| %>
-    <%= f.input :address, placeholder: "Email" %>
+    <%= f.input :address, placeholder: "Add your address" %>
     <%= f.input :accomodation, collection: ["Apartment", "House"] %>
     <%= f.input :price, placeholder: "$$$" %>
     <%= f.input :family_description, placeholder: "Write small story about your family?" %>
