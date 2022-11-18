@@ -2,7 +2,7 @@
   <h1><strong>Upcoming Trips</strong> 🎉 </h1>
   <% @bookings.each do |booking| %>
     <div class="card-with-info">
-      <img class="family-photo" src= <%= booking.homestay.img_url %>/>
+      <img class="family-photo" src= <%= booking.homestay.photos.attached? ? cl_image_path(booking.homestay.photos.first.key) : booking.homestay.img_url %>/>
       <div class="info-about-family">
         <h2><%= booking.homestay.user.last_name %> Family</h2>
         <p><strong><%= booking.homestay.address %></strong></p>
