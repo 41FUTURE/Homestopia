@@ -2,11 +2,13 @@
   display: flex;
   justify-content: center;
   margin-left: 88px;
+  position: relative;
 }
 
 .card-home-info {
 margin-right: 80px;
 width: 500px;
+margin-bottom: 16px;
 }
 
 .card-home-photos {
@@ -63,6 +65,7 @@ h2 {
   width: 35%;
   margin-right: 88px;
   margin-top: 32px;
+  margin-bottom: 16px;
 }
 .card-owner-information {
   background-color: rgba($color:#BE75D0, $alpha: 0.1);
@@ -148,4 +151,25 @@ width: 100%;
 
 .card-product {
 margin-bottom: 16px;
+}
+
+.card-back-link {
+  position: absolute;
+  left: 10%;
+  bottom: 4px;
+  color: rgba($color: #8267b2, $alpha: 1.0);
+  object-fit: cover;
+  padding: 4px;
+  width: 100%;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba($color: #8267b2, $alpha: 1.0);
+}
+
+.card-back-link {
+  position: absolute;
+  left: 10%;
+  bottom: 0px;
+  color: rgba($color: #8267b2, $alpha: 1.0);
+  height: 36px;
+  width: 120px;
 }

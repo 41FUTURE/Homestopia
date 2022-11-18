@@ -1,32 +1,32 @@
-<body>
+<div class="home-page-centre">
   <div class="d-flex flex-column justify-content-between margin-left-3" style="min-height: 100vh;">
     <div>
       <div class="mytrips">
         <h3>Upcoming Trips🎉</h3>
-      </div>
-      <div class="card-booking">
-        <% @bookings.each do |booking| %>
-          <div class="card-product">
-            <img src= <%= booking.homestay.img_url %>/>
-            <div class="d-flex w-100 justify-content-between">
-              <div class="card-product-infos">
-                <h2><%= booking.user.last_name %> Family</h2>
-                <p><strong><%= booking.homestay.address %></strong></p>
-              </div>
-              <div>
-                <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
+        <div class="card-booking">
+          <% @bookings.each do |booking| %>
+            <div class="card-product">
+              <img src= <%= booking.homestay.img_url %>/>
+              <div class="d-flex w-100 justify-content-between">
+                <div class="card-product-infos">
+                  <h2><%= booking.user.last_name %> Family</h2>
+                  <p><strong><%= booking.homestay.address %></strong></p>
+                  <p><%= booking.booking_start %> - <%= booking.booking_end%></p>
+                </div>
+                <div >
+                  <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="d-flex flex-column justify-content-between" style="min-height: 5vh;">
-      <div>
+      <div class="d-flex flex-column justify-content-between" style="min-height: 5vh;">
         <div>
+          <div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-</body>

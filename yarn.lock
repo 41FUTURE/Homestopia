@@ -516,6 +516,11 @@ kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
+lightgallery@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-2.7.0.tgz#faa1ff6c7338557f39a29a63228b77793afad95d"
+  integrity sha512-iozIJNxKl3wPWcspCmRdaSYpYy3PjloC8BN0PDwaDOoTA1hsu1IhZdWQWI5cGgMJvnksP94/smElMwn2HS5d3Q==
+
 loader-runner@^4.2.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-4.3.0.tgz#c1b4a163b99f614830353b16755e7149ac2314e1"
@@ -693,6 +698,13 @@ source-map@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+stimulus-lightbox@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/stimulus-lightbox/-/stimulus-lightbox-3.1.0.tgz#91282213b2a5465d26804be3cae7c6b40de57b9d"
+  integrity sha512-FEw+zHkHCFvExmLa0lVOLrR8/zXZqeDLhvRzgtfm0KuL0hMbpNMMH+BexT/FYFoD+mHCRauLNNkQzEmRVjorZQ==
+  dependencies:
+    lightgallery "^2.7.0"
 
 supports-color@^8.0.0:
   version "8.1.1"

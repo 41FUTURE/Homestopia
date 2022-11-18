@@ -1,5 +1,5 @@
 .form-container-homestay {
-  background-image: url("https://nationaltoday.com/wp-content/uploads/2022/01/Family-Day-1.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://nationaltoday.com/wp-content/uploads/2022/01/Family-Day-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,13 +8,12 @@
   padding-bottom: 16px;
   padding-left: 5%;
   padding-right: 5%;
-  box-shadow: 0 0 8px rgba($color: #8267b2, $alpha: 1.0);
+  box-shadow: 0 0 8px rgba($color: #8267b2, $alpha: 0.9);
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 5%;
   margin-bottom: 5%;
-
 }
 .form-container-homestay h1, .form-container-homestay p {
   text-shadow: 0 0 8px white;

@@ -6,10 +6,10 @@
   color: rgba(0, 0, 0, 0.3);
   left: 0;
   bottom: 0;
-  display: table;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #a592cb;
 }
 .footer-links {
   display: flex;
