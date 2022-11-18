@@ -9,3 +9,10 @@ import { application } from "./application"
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+
+import { Application } from '@hotwired/stimulus'
+import Lightbox from 'stimulus-lightbox'
+
+const app = Application.start()
+app.register('lightbox', Lightbox)
