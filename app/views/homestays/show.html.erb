@@ -1,4 +1,7 @@
 <div class="container-show">
+  <div>
+    <%= link_to "↩Go Back", homestays_path, class: 'card-back-link'%>
+  </div>
   <div class="card-home-info">
     <div class="card-home-photos">
       <div class="home-maine-photo", style="background-image: url(<%=@homestay.photos.attached? ? cl_image_path(@homestay.photos.first.key) : @homestay.img_url %>);">

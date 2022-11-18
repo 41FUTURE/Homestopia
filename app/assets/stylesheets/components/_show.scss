@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-left: 88px;
+  position: relative;
 }
 
 .card-home-info {
@@ -148,4 +149,16 @@ width: 100%;
 
 .card-product {
 margin-bottom: 16px;
+}
+
+.card-back-link {
+  position: absolute;
+  left: 10%;
+  bottom: 4px;
+  color: rgba($color: #8267b2, $alpha: 1.0);
+  object-fit: cover;
+  padding: 4px;
+  width: 100%;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba($color: #8267b2, $alpha: 1.0);
 }
