@@ -6,7 +6,7 @@
 .flip-card-title {
   text-align: center;
   padding: 1rem;
-  color: #cfb6ff;
+  color: #8961c8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 64px;
   font-weight: bold;
@@ -15,7 +15,7 @@
 .flip-card {
   background-color: transparent;
   width: 100%;
-  border: 0.2rem solid #CFB6FF;
+  border: 0.2rem solid #8961c8;
   perspective: 1000px;
   padding-top: 1rem;
   margin: 1rem;
@@ -31,6 +31,12 @@
   transform-style: preserve-3d;
 }
 
+.content-status-flip {
+  margin-right: 0.4rem;
+  display: flex;
+  justify-content: right;
+}
+
 .flip-card:hover .flip-card-inner {
   transform: rotateY(-180deg);
 }
@@ -44,7 +50,6 @@
 .card-body {
   position: absolute;
   inset: 0;
-  background-image: url("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664721811/macovccaszdtnctrjxbt.jpg");
   background-size: cover;
   background-color: transparent;
   background-position: center;
@@ -55,7 +60,7 @@
   background-color: #bbb;
   color: black;
   position: relative;
-  height: 16rem;
+  height: 20rem;
 }
 
 .flip-card-back {
@@ -92,17 +97,27 @@
   font-weight: bold;
 }
 
-.card-text {
+.inner-card-content {
   position: absolute;
   left: -15px;
   bottom: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-.card-font {
+.card-font-left {
   margin: -10px;
   text-align: start;
+  color: white;
+  font-weight: bold;
+  opacity: 80%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 24px;
+}
+
+.card-font-right {
+  margin: -10px;
+  text-align: end;
   color: white;
   font-weight: bold;
   opacity: 80%;
@@ -111,11 +126,45 @@
 .booking-tag {
   margin: 1px 0px;
   padding: 10px 5px 10px 5px;
-  background-color: #CFB6FF;
+  background-color: #8961c8;
   color: white;
   border-radius: 8px;
   font-weight: lighter;
   font-size: 14px;
   text-align: start;
   text-justify: auto;
+}
+
+.booking-status {
+  margin: 1px 0px;
+  padding: 10px 5px 10px 5px;
+  background-color: #CFB6FF;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: start;
+  text-justify: auto;
+}
+
+.green {
+  color: rgb(78, 255, 110);
+  border: 0.2rem solid;
+  width: auto;
+  border-radius: 2%;
+}
+
+.red {
+  color: rgb(243, 68, 68);
+  border: 0.2rem solid;
+  width: auto;
+  border-radius: 2%;
+}
+
+.arrow {
+  padding: 12px 12px 10px 12px;
+  color: #8961c8;
+  border-radius: 8px;
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: start;
 }
