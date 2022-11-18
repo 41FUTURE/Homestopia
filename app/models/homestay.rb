@@ -6,9 +6,6 @@ class Homestay < ApplicationRecord
       tsearch: { prefix: true }
     }
 
-  pg_search_scope :search_by_title_and_synopsis,
-    against: :tag_list
-
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 

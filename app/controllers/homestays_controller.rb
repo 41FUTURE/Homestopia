@@ -15,6 +15,10 @@ class HomestaysController < ApplicationController
         lng: homestay.longitude
       }
     end
+
+    @tags = ActsAsTaggableOn::Tag.all
+
+    @homestays = @homestays.tagged_with(params[:tags]) if params[:tags]&.any?
   end
 
   def show
