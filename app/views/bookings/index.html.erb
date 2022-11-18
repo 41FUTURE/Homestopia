@@ -10,7 +10,8 @@
             <img src= <%= booking.homestay.img_url %>/>
             <div class="d-flex w-100 justify-content-between">
               <div class="card-product-infos">
-                <h2><%= booking.user.first_name %> <%= booking.user.last_name %></h2>
+                <h2><%= booking.user.last_name %> Family</h2>
+                <p><strong><%= booking.homestay.address %></strong></p>
               </div>
               <div>
                 <p class="btn btn-ghost disabled mx-3"> <%=booking.status %></p>
