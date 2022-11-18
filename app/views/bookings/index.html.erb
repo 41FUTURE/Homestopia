@@ -4,12 +4,18 @@
     <div class="card-with-info">
       <img class="family-photo" src= <%= booking.homestay.img_url %>/>
       <div class="info-about-family">
-        <h2><%= booking.user.last_name %> Family</h2>
+        <h2><%= booking.homestay.user.last_name %> Family</h2>
         <p><strong><%= booking.homestay.address %></strong></p>
         <p><%= booking.booking_start %> - <%= booking.booking_end%></p>
       </div>
       <div class="card-status">
-        <%=booking.status %>
+        <% if booking.status == "confirm" %>
+          <p class="green-color"><%= booking.status %>ed</p>
+        <% elsif booking.status == "decline" %>
+          <p class="red-color"><%= booking.status %>d</p>
+        <% else %>
+          <p class="pending"><%= booking.status %></p>
+        <% end %>
       </div>
     </div>
   <% end %>

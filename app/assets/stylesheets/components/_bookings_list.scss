@@ -11,39 +11,59 @@
 }
 .family-photo {
   border-radius: 16px;
-   width: 160px;
-   height: 160px;
+  width: 160px;
+  height: 160px;
+}
 
- }
-
- .all-bookings {
+.all-bookings {
   align-items: center;
   height: 800px;
- }
+}
 
- .card-status {
-  margin-top: 64px;
-  margin-right: 16px;
+.card-status {
+  margin-top: 10px;
+  margin-right: 10px;
   margin-left: 8px;
   padding: 8px;
-  background-color: rgba($color: #a592cb, $alpha: 1.0);
-  box-shadow: 0 0 8px rgba($color: #8267b2, $alpha: 1.0);
   height: 40px;
   border-radius: 16px;
-  color: white;
- }
+}
 
- .info-about-family {
+.green-color {
+  color: rgb(78, 255, 110);
+  border: 0.2rem solid;
+  width: auto;
+  border-radius: 2%;
+  padding: 4px;
+}
+
+.red-color {
+  color: rgb(243, 68, 68);
+  border: 0.2rem solid;
+  width: auto;
+  border-radius: 2%;
+  padding: 4px;
+}
+
+.pending {
+  color: rgb(117, 117, 117);
+  border: 0.2rem solid;
+  width: auto;
+  border-radius: 2%;
+  padding: 4px;
+}
+
+.info-about-family {
   margin-right: 16px;
   margin-left: 16px;
- }
+}
 
- .card-with-info h2 {
+.card-with-info h2 {
   margin-top: 8px;
   text-align: center;
- }
+}
 
- .all-bookings h1 {
+.all-bookings h1 {
   margin-left: 40%;
   margin-top: 32px;
- }
+}
