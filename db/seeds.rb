@@ -12,8 +12,6 @@ Booking.destroy_all
 puts "Destroying all homestays..."
 Homestay.destroy_all
 
-
-
 User.create!(
   email: "savi@me.com",
   password: "123456",
@@ -97,7 +95,7 @@ Homestay.create!(
   family_description: "In my family, basically, we are five members altogether. They are - my parents, my younger sister and younger brother and me. We, five people, live in our own Apartment. Besides, we have some other relatives who are family members too and they live adjacent to us. If I count them, the number will be more. Most of the members are related to me either from my father or my mother. But the number of my maternal relatives and family member is more from my paternal part. I am too lucky that all of them love me much.",
   accomodation: ["Apartment", "House"].sample,
   address: "913-14 Jogasawa, Mutsu shi, Aomori ken, Japan",
-  user: User.find(1),
+  user: User.all[0],
   tag_list: tag.sample(3),
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -111,7 +109,7 @@ Homestay.create!(
   family_description: "My family consists of my mother, father and my little sister.",
   accomodation: ["Apartment", "House"].sample,
   address: "229-5 Higashimachi, Iwakura shi, Aichi ken, Japan",
-  user: User.find(3),
+  user: User.all[2],
   tag_list: tag.sample(3),
   img_url: "https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -124,7 +122,7 @@ Homestay.create!(
   family_description: "I teaching English as a Foreign Language since 2008. Having spent 30 years as a British policeman, he teaches English not as an academic but as a communicator. He has degrees in Psychology, IT, Accounting, and English. Larry has experience in teaching IELTS, CAE, CPE, and Business English (including Accounting, Logistics, and Architecture).",
   accomodation: ["Apartment", "House"].sample,
   address: "695-16 Saidaiji gomyo, Okayama shi higashi ku, Okayama ken, Japan",
-  user: User.find(4),
+  user: User.all[3],
   tag_list: tag.sample(3),
   img_url: "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -138,7 +136,7 @@ Homestay.create!(
   family_description: "I am extremely lucky to born in this family. The family bonding is great here. Everyone comes out to help the others in needs and emergencies. In fact, the entire family backs the other family member. My one thing should be made clear here – my family does not favour any illicit activities. If someone is found guilty of any illegal cause, my grandfather does not support him/ her and the similar issue is for us. We do not favour anything illegitimate and in our early childhood, we were taught to follow the standard rules and laws for everything. The entire family spends quality time when there is an occasion or during the weekly lunch. In fact, this has become a tradition for us to take a weekly meal together on the weekly holiday afternoon. It has been possible only for the strong bond we maintain.",
   accomodation: ["Apartment", "House"].sample,
   address: "626-6 Ogi, Kikuchi shi, Kumamoto ken, Japan",
-  user: User.find(6),
+  user: User.all[5],
   tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/6530679/pexels-photo-6530679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -152,7 +150,7 @@ Homestay.create!(
   family_description: "In my family, basically, we are five members altogether. They are - my parents, my younger sister and younger brother and me. We, five people, live in our own Apartment. Besides, we have some other relatives who are family members too and they live adjacent to us. If I count them, the number will be more. Most of the members are related to me either from my father or my mother. But the number of my maternal relatives and family member is more from my paternal part. I am too lucky that all of them love me much.",
   accomodation: ["Apartment", "House"].sample,
   address: "3-589-7 Kuminoki, Osakasayama shi, Osaka fu, Japan",
-  user: User.find(7),
+  user: User.all[6],
   tag_list: tag.sample(2),
   img_url: "https://eriefamilycenter.org/wp-content/uploads/2017/08/two.jpg"
 )
@@ -165,7 +163,7 @@ Homestay.create!(
   family_description: "In my family, basically, we are five members altogether. They are - my parents, my younger sister and younger brother and me. We, five people, live in our own Apartment. Besides, we have some other relatives who are family members too and they live adjacent to us. If I count them, the number will be more. Most of the members are related to me either from my father or my mother. But the number of my maternal relatives and family member is more from my paternal part. I am too lucky that all of them love me much.",
   accomodation: ["Apartment", "House"].sample,
   address: "814-10 Kuchida, Chita gun taketoyo cho, Aichi ken, Japan",
-  user: User.find(1),
+  user: User.all[0],
   tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -178,7 +176,7 @@ Homestay.create!(
   family_description: "I am extremely lucky to born in this family. The family bonding is great here. Everyone comes out to help the others in needs and emergencies. In fact, the entire family backs the other family member. My one thing should be made clear here – my family does not favour any illicit activities. If someone is found guilty of any illegal cause, my grandfather does not support him/ her and the similar issue is for us. We do not favour anything illegitimate and in our early childhood, we were taught to follow the standard rules and laws for everything. The entire family spends quality time when there is an occasion or during the weekly lunch. In fact, this has become a tradition for us to take a weekly meal together on the weekly holiday afternoon. It has been possible only for the strong bond we maintain.",
   accomodation: ["Apartment", "House"].sample,
   address: "833-18 Ishidamachi, Nobeoka shi, Miyazaki ken, Japan",
-  user: User.find(2),
+  user: User.all[1],
   tag_list: tag.sample(1),
   img_url: "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -191,7 +189,7 @@ Homestay.create!(
   family_description: "In my family, basically, we are five members altogether. They are - my parents, my younger sister and younger brother and me. We, five people, live in our own Apartment. Besides, we have some other relatives who are family members too and they live adjacent to us. If I count them, the number will be more. Most of the members are related to me either from my father or my mother. But the number of my maternal relatives and family member is more from my paternal part. I am too lucky that all of them love me much.",
   accomodation: ["Apartment", "House"].sample,
   address: "Austrasse 27, 77977 Rust, Germany",
-  user: User.find(6),
+  user: User.all[5],
   tag_list: tag.sample,
   img_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/winter-day-by-fireplace-royalty-free-image-1639519069.jpg"
 )
@@ -204,7 +202,7 @@ Homestay.create!(
   family_description: "My family is the place where I return at the end of the day. This is the place that takes care of me. It supports me when I am sick, when I am down – it cheers me up to move ahead. The other members also take care of me in various aspects. There is a strong feeling inside me for my family. The feeling is the same to the family members as well. We love to be happy in contact with each other. As a matter of fact, this is the very best family I have ever seen or met where there are no major conflicting issues. I have learnt a lot of real-life things from here. Based on such things, my family is important to me than any other things in the world.",
   accomodation: ["Apartment", "House"].sample,
   address: "29 Seel Street Liverpool L1 4AU England",
-  user: User.find(5),
+  user: User.all[4],
   tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/4205505/pexels-photo-4205505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -216,7 +214,7 @@ Homestay.create!(
   family_description: "In my family, basically, we are five members altogether. They are - my parents, my younger sister and younger brother and me. We, five people, live in our own Apartment. Besides, we have some other relatives who are family members too and they live adjacent to us. If I count them, the number will be more. Most of the members are related to me either from my father or my mother. But the number of my maternal relatives and family member is more from my paternal part. I am too lucky that all of them love me much.",
   accomodation: ["Apartment", "House"].sample,
   address: "464-18 Mitsuyamotocho, Nagahama shi, Shiga ken, Japan",
-  user: User.find(4),
+  user: User.all[3],
   tag_list: tag.sample(3),
   img_url: "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -229,7 +227,7 @@ Homestay.create!(
   family_description: "I am extremely lucky to born in this family. The family bonding is great here. Everyone comes out to help the others in needs and emergencies. In fact, the entire family backs the other family member. My one thing should be made clear here – my family does not favour any illicit activities. If someone is found guilty of any illegal cause, my grandfather does not support him/ her and the similar issue is for us. We do not favour anything illegitimate and in our early childhood, we were taught to follow the standard rules and laws for everything. The entire family spends quality time when there is an occasion or during the weekly lunch. In fact, this has become a tradition for us to take a weekly meal together on the weekly holiday afternoon. It has been possible only for the strong bond we maintain.",
   accomodation: ["Apartment", "House"].sample,
   address: "1470 S Washington St, North Attleboro MA 2760",
-  user: User.find(2),
+  user: User.all[1],
   tag_list: tag.sample(1),
   img_url: "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -243,7 +241,7 @@ Homestay.create!(
   family_description: "I am extremely lucky to born in this family. The family bonding is great here. Everyone comes out to help the others in needs and emergencies. In fact, the entire family backs the other family member. My one thing should be made clear here – my family does not favour any illicit activities. If someone is found guilty of any illegal cause, my grandfather does not support him/ her and the similar issue is for us. We do not favour anything illegitimate and in our early childhood, we were taught to follow the standard rules and laws for everything. The entire family spends quality time when there is an occasion or during the weekly lunch. In fact, this has become a tradition for us to take a weekly meal together on the weekly holiday afternoon. It has been possible only for the strong bond we maintain.",
   accomodation: ["Apartment", "House"].sample,
   address: "0 Soojian Dr, Leicester MA 1524",
-  user: User.find(6),
+  user: User.all[5],
   tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/6530679/pexels-photo-6530679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -256,7 +254,7 @@ Homestay.create!(
   family_description: "In my family, basically, we are five members altogether. They are - my parents, my younger sister and younger brother and me. We, five people, live in our own Apartment. Besides, we have some other relatives who are family members too and they live adjacent to us. If I count them, the number will be more. Most of the members are related to me either from my father or my mother. But the number of my maternal relatives and family member is more from my paternal part. I am too lucky that all of them love me much.",
   accomodation: ["Apartment", "House"].sample,
   address: "777 Brockton Avenue, Abington MA 2351",
-  user: User.find(7),
+  user: User.all[6],
   tag_list: tag.sample(3),
   img_url: "https://eriefamilycenter.org/wp-content/uploads/2017/08/two.jpg"
 )
@@ -269,7 +267,7 @@ Homestay.create!(
   family_description: "My family consists of my mother, father and my little sister.",
   accomodation: ["Apartment", "House"].sample,
   address: "832-3 Fukuyoshi, Tohaku gun misasa cho, Tottori ken, Japan",
-  user: User.find(5),
+  user: User.all[4],
   tag_list: tag.sample,
   img_url: "https://cdn2.momjunction.com/wp-content/uploads/2019/09/151-Interesting-Would-You-Rather-Questions-For-Couples-2.jpg"
 )
@@ -282,7 +280,7 @@ Homestay.create!(
   family_description: "My family is the place where I return at the end of the day. This is the place that takes care of me. It supports me when I am sick, when I am down – it cheers me up to move ahead. The other members also take care of me in various aspects. There is a strong feeling inside me for my family. The feeling is the same to the family members as well. We love to be happy in contact with each other. As a matter of fact, this is the very best family I have ever seen or met where there are no major conflicting issues. I have learnt a lot of real-life things from here. Based on such things, my family is important to me than any other things in the world.",
   accomodation: ["Apartment", "House"].sample,
   address: "72 Main St, North Reading MA 1864",
-  user: User.find(1),
+  user: User.all[0],
   tag_list: tag.sample,
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -296,7 +294,7 @@ Homestay.create!(
   family_description: "My family consists of my mother, father and my little sister.",
   accomodation: ["Apartment", "House"].sample,
   address: "8 Sentosa Gateway, Singapore 098269",
-  user: User.find(3),
+  user: User.all[2],
   tag_list: tag.sample,
   img_url: "https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -309,7 +307,7 @@ Homestay.create!(
   family_description: "My family is the place where I return at the end of the day. This is the place that takes care of me. It supports me when I am sick, when I am down – it cheers me up to move ahead. The other members also take care of me in various aspects. There is a strong feeling inside me for my family. The feeling is the same to the family members as well. We love to be happy in contact with each other. As a matter of fact, this is the very best family I have ever seen or met where there are no major conflicting issues. I have learnt a lot of real-life things from here. Based on such things, my family is important to me than any other things in the world.",
   accomodation: ["Apartment", "House"].sample,
   address: "Via Angelo Maspoli 18, Mendrisio 6850 Switzerland",
-  user: User.find(4),
+  user: User.all[3],
   tag_list: tag.sample,
   img_url: "https://t4.ftcdn.net/jpg/02/77/68/51/360_F_277685185_UAYxm224UPelni1rxsuAUZQbfhly0RpL.jpg"
 )
@@ -322,7 +320,7 @@ Homestay.create!(
   family_description: "I am lucky to have such a family. All the members of the family are highly intimate with me and I am to them too. The interpersonal relationship with all the family members in my family is fine and we do truly care for each other. When someone is in any sort of trouble or in any difficulty, we try to provide necessary supports immediately so the situation could be solved. Moreover, I always try to help my siblings in their studies and sometimes my father also helps them in completing their school assignments. Besides, my mother takes every form of care for us all. She is the one who is the key member of the family. I have a very good relationship with my father but the relationship is better with my mother and I pass more time with her when I am at home on my off-days.",
   accomodation: ["Apartment", "House"].sample,
   address: "838-14 Kumanogawacho nishi, Shingu shi, Wakayama ken, Japan",
-  user: User.find(2),
+  user: User.all[1],
   tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/160994/family-outdoor-happy-happiness-160994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -335,7 +333,7 @@ Homestay.create!(
   family_description: "My family is the place where I return at the end of the day. This is the place that takes care of me. It supports me when I am sick, when I am down – it cheers me up to move ahead. The other members also take care of me in various aspects. There is a strong feeling inside me for my family. The feeling is the same to the family members as well. We love to be happy in contact with each other. As a matter of fact, this is the very best family I have ever seen or met where there are no major conflicting issues. I have learnt a lot of real-life things from here. Based on such things, my family is important to me than any other things in the world.",
   accomodation: ["Apartment", "House"].sample,
   address: "690-17 Tonemachi okkai, Numata shi, Gumma ken, Japan",
-  user: User.find(5),
+  user: User.all[4],
   tag_list: tag.sample,
   img_url: "https://cdn2.momjunction.com/wp-content/uploads/2019/09/151-Interesting-Would-You-Rather-Questions-For-Couples-2.jpg"
 )
@@ -350,7 +348,7 @@ Homestay.create!(
   family_description: "My family consists of my mother, father and my little sister.",
   accomodation: ["Apartment", "House"].sample,
   address: "989-8 Tomizawa, Soma shi, Fukushima ken, Japan",
-  user: User.find(3),
+  user: User.all[2],
   tag_list: tag.sample(1),
   img_url: "https://images.pexels.com/photos/1835927/pexels-photo-1835927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
@@ -363,7 +361,7 @@ Homestay.create!(
   family_description: "My family consists of my mother, father and my little sister.",
   accomodation: ["Apartment", "House"].sample,
   address: "Klewinowo 116, 16-061 Klewinowo, Poland",
-  user: User.find(7),
+  user: User.all[6],
   tag_list: tag.sample(1),
   img_url: "https://eriefamilycenter.org/wp-content/uploads/2017/08/two.jpg"
 )
@@ -376,7 +374,7 @@ Homestay.create!(
   family_description: "My family is the place where I return at the end of the day. This is the place that takes care of me. It supports me when I am sick, when I am down – it cheers me up to move ahead. The other members also take care of me in various aspects. There is a strong feeling inside me for my family. The feeling is the same to the family members as well. We love to be happy in contact with each other. As a matter of fact, this is the very best family I have ever seen or met where there are no major conflicting issues. I have learnt a lot of real-life things from here. Based on such things, my family is important to me than any other things in the world.",
   accomodation: ["Apartment", "House"].sample,
   address: "Fischerstrasse 33, 77977 Rust, Germany",
-  user: User.find(1),
+  user: User.all[0],
   tag_list: tag.sample(2),
   img_url: "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 )
