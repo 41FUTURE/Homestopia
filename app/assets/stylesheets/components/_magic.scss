@@ -1,9 +1,7 @@
-
-$fuschia: #ff0081;
+$fuschia: #be75d0;
 $button-bg: $fuschia;
 $button-text-color: #fff;
 $baby-blue: #f8faff;
-
 
 .bubbly-button {
   font-family: "Helvetica", "Arial", sans-serif;
@@ -23,6 +21,7 @@ $baby-blue: #f8faff;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(122, 80, 102, 0.5);
   text-decoration: none;
+  border-radius: 20px;
 
   &:focus {
     outline: 0;

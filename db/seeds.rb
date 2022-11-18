@@ -383,10 +383,11 @@ Homestay.create!(
 puts "... created #{Homestay.count} homestays."
 
 15.times do
-  Booking.create!(booking_start: Faker::Date.backward(days: 14),
-  booking_end: Date.today,
-  user: User.all.sample,
-  homestay: Homestay.all.sample)
+  Booking.create!(
+    booking_end: Faker::Date.forward(days: 23),
+    booking_start: Faker::Date.backward(days: 14),
+    user: User.all.sample,
+    homestay: Homestay.all.sample)
 end
 
 puts "... created #{Booking.count} booking."
