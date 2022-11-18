@@ -1,11 +1,11 @@
 .main-container {
   display: flex;
   justify-content: space-between;
-  margin: auto 150px;
+  margin: auto 100px;
 
   &.container-map {
     display: grid;
-    grid-template-columns: 1fr 0.75fr;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
 }

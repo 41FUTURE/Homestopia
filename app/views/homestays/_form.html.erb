@@ -1,14 +1,14 @@
 <div class="form-container-homestay ">
   <h1>Add new homeplace</h1>
   <%= simple_form_for @homestay do |f| %>
-    <%= f.input :address %>
+    <%= f.input :address, placeholder: "Email" %>
     <%= f.input :accomodation, collection: ["Apartment", "House"] %>
-    <%= f.input :price %>
-    <%= f.input :family_description %>
-    <%= f.input :comments %>
+    <%= f.input :price, placeholder: "$$$" %>
+    <%= f.input :family_description, placeholder: "Write small story about your family?" %>
+    <%= f.input :comments, placeholder: "Small comments about your home" %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.input :number_of_users %>
-    <%= f.input :tag_list, as: :check_boxes, collection: [ "No Smoking",  "No Pets", "No Kids" "Has Pets", "Has Kids"] %>
+    <%= f.input :number_of_users, placeholder: "How many people would your family like to host?", label: "Number of guests" %>
+    <%= f.input :tag_list, as: :check_boxes, collection: [ "No Smoking",  "No Pets", "No Kids", "Has Pets", "Has Kids"], label: "Options" %>
     <%= f.submit 'Add' %>
   <% end %>
 </div>
