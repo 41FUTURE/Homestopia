@@ -1,1 +1,6 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+![image](https://user-images.githubusercontent.com/99112509/203449208-5435ce20-409a-451f-b68a-fc6c5517c312.png)
+![image](https://user-images.githubusercontent.com/99112509/203449261-c4db9b76-6b4a-4274-900f-343af3ab4789.png)
+![image](https://user-images.githubusercontent.com/99112509/203449288-79d5fa2a-742d-47ec-83e2-83007c4a6517.png)
+![image](https://user-images.githubusercontent.com/99112509/203449339-09c0dd6c-b57f-4bb1-941f-15c107685d0d.png)
+![image](https://user-images.githubusercontent.com/99112509/203449360-de057721-67db-49ce-aec9-dda00a35f216.png)
+![image](https://user-images.githubusercontent.com/99112509/203449377-5f5909ee-71e3-406e-aa6e-000c166aefcb.png)
