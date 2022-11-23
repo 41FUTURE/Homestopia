@@ -1,41 +1,58 @@
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-    data-mdb-toggle="dropdown" aria-expanded="false">
-    Filter Options
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li>
-            <a class="dropdown-item" href="#">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="Checkme1" />
-                    <label class="form-check-label" for="Checkme1">No smoking</label>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="Checkme2" checked />
-                    <label class="form-check-label" for="Checkme2">No kids</label>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a class="dropdown-item" href="#">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="Checkme3" />
-                    <label class="form-check-label" for="Checkme3">No pets</label>
-                </div>
-            </a>
-        </li>
-        <li><hr class="dropdown-divider" /></li>
-        <li>
-            <a class="dropdown-item" href="#">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="Checkme4" checked />
-                    <label class="form-check-label" for="Checkme4">Check me</label>
-                </div>
-            </a>
-        </li>
-    </ul>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        Filters
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body bg-white">
+        <%= form_with method: :get, url: homestays_path do %>
+          <% @tags.each do |tag| %>
+            <div class="form-check">
+              <input name="tags[]" class="form-check-input" type="checkbox" value="<%= tag.name %>" id="flexCheckDefault<%= tag.name %>" <%= "checked" if params[:tags]&.include?(tag.name) %>>
+              <label class="form-check-label" for="flexCheckDefault<%= tag.name %>">
+                <%= tag.name %>
+            </label>
+            </div>
+          <% end %>
+          <%= submit_tag 'Submit', class:"btn btn-primary mt-2 justify-content center" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+<%# <div class="dropdown sticky-top">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+    Filters
+  </button>
+  <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenu2">
+    <li>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          No Kids
+        </label>
+      </div>
+    </li>
+    <li>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          No Pets
+        </label>
+      </div>
+    </li>
+    <li>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          No Smoking
+        </label>
+      </div>
+    </li>
+  </ul>
+</div> %>

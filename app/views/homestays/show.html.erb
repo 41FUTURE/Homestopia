@@ -1,17 +1,23 @@
 <div class="container-show">
+  <%= link_to "Go back ↩", homestays_path, class: 'card-back-link'%>
   <div class="card-home-info">
     <div class="card-home-photos">
-      <div class="home-maine-photo", style="background-image: url('https://www.multivu.com/players/English/8444753-hgtv-dream-home-2020/image/HGTVHero_1574114287394-HR.jpg');">
+      <div class="home-maine-photo", style="background-image: url(<%=@homestay.photos.attached? ? cl_image_path(@homestay.photos.first.key) : @homestay.img_url %>);">
       </div>
       <div class="home-photos">
-        <div class="photo", style="background-image: url('http://cdn.home-designing.com/wp-content/uploads/2019/02/courtyard-design-2.jpg');"></div>
-        <div class="photo", style="background-image: url('https://www.homestratosphere.com/wp-content/uploads/2017/06/Large-bedroom-cathedral-ceiling-oct30.jpg');"></div>
-        <div class="photo", style="background-image: url('https://st.hzcdn.com/simgs/pictures/dining-rooms/holiday-home-in-kerala-humming-tree-img~6fc1cecb0ee354ea_14-1175-1-925df73.jpg');"></div>
+        <div class="photo">
+          <% if @homestay.photos.count > 1 %>
+            <% @homestay.photos[1..-1].each do |photo| %>
+              <%= cl_image_tag(photo.key) %>
+            <% end %>
+          <% else %>
+            <%= image_tag('https://media.istockphoto.com/id/155666671/vector/vector-illustration-of-red-house-icon.jpg?s=612x612&w=0&k=20&c=tBqaabvmjFOBVUibZxbd8oWJqrFR5dy-l2bEDJMtZ40=')%>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="card-home-description">
-      <h2> Location: <%= @homestay.country %>,
-        <%= @homestay.city %>,
+      <h2> Location:
         <%= @homestay.address %> </h2>
       <div class="options">
         <% @homestay.tag_list.each do |tag| %>
@@ -20,7 +26,7 @@
       </div>
       <p><strong>Type of accomodation:</strong> <%= @homestay.accomodation %></p>
       <div>
-        <p><strong>Small comments about our home:</strong> <%= @homestay.comments %></p>
+        <p><strong>A small comment about our home:</strong> <%= @homestay.comments %></p>
       </div>
     </div>
   </div>
@@ -30,7 +36,7 @@
     </div>
     <div class="card-owner-information">
       <div class="card-photo-name">
-        <div class="user-avatar", style="background-image: url('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1664769848/vdngpd4bmtp7oioig3bo.jpg');">
+        <div class="user-avatar", style="background-image: url(<%=@homestay.user.img_url %>);">
         </div>
         <div class="full-name">
           <h2> <%= @homestay.user.first_name %>
@@ -41,8 +47,11 @@
       <div class="card-family-description">
         <h2><strong> Age:</strong> <%= @homestay.user.age %> </h2>
         <p><strong>Gender:</strong>  <%= @homestay.user.gender %> </p>
-        <p><strong>Small story about our family:</strong> <%= @homestay.family_description %></p>
+        <p><strong>About the family:</strong> <%= @homestay.family_description %></p>
         <p><strong>About myself: </strong><%= @homestay.user.description %></p>
+        <script>
+          src="app/javascript/controllers/image_modal_controller.js">
+        </script>
       </div>
     </div>
   </div>

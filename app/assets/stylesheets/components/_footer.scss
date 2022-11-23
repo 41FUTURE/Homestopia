@@ -1,12 +1,16 @@
 .footer {
   background: transparent;
-  display: flex;
   align-items: center;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0, 0, 0, 0.3);
   left: 0;
   bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #a592cb;
+  flex-shrink: 0;
 }
 .footer-links {
   display: flex;
@@ -24,4 +28,16 @@
 }
 .footer .fa-heart {
   color: #d23333;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
 }

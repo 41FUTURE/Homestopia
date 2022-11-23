@@ -2,8 +2,8 @@
   <div class="form-container mt-3">
     <h1>Book home</h1>
     <%= simple_form_for [@homestay, @booking] do |f| %>
-      <%= f.input :booking_start, as: :date %>
-      <%= f.input :booking_end, as: :date %>
+      <%= f.input :booking_start, as: :date, label: "Start Date" %>
+      <%= f.input :booking_end, as: :date, label: "End Date" %>
       <%= f.input :number_of_guests %>
       <%= f.submit 'Add', class: 'btn' %>
     <% end %>

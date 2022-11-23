@@ -1,13 +1,13 @@
 <div class="card-homestay">
   <div class="img-text">
-    <img class="resize-img" src=<%=homestay.img_url%> alt="family picture">
+    <img class="resize-img" src=<%=homestay.photos.attached? ? cl_image_path(homestay.photos.first.key) : homestay.img_url %> alt="family picture">
     <div class="bottom-left">
-      <h2><%= homestay.country%>, <%= homestay.city%></h2>
+      <h2><%= homestay.address%></h2>
     </div>
   </div>
   <div class="card-homestay-infos text-black">
-    <h2><%= homestay.user.last_name %> Family</h2>
-    <p><%= homestay.family_description %></p>
+    <h2>The <%= homestay.user.last_name %> Family</h2>
+    <p><%= homestay.family_description.truncate(40) %></p>
     <div class="bottom-right">
       <p><b>$<%= homestay.price %></b></p>
     </div>
