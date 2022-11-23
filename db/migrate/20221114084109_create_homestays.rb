@@ -9,7 +9,6 @@ class CreateHomestays < ActiveRecord::Migration[7.0]
       t.string :accomodation
       t.string :address
       t.boolean :availability
-      t.string :optionals
 
       t.timestamps
     end

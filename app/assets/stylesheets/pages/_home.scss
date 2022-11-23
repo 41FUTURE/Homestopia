@@ -1,1 +1,56 @@
 // Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), asset-url("family.jpeg");
+  background-color: #A592CB;
+}
+
+.btn {
+  color: white;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #cfb6ff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#home-body {
+  background-color: #F4F4F4;
+}
+
+#home-body  h2 {
+  font-size: 32px;
+  color: #cfb6ff;
+}
+
+#home-body  p {
+  font-size: 20px;
+  color: black;
+}
+
+.call_to_action {
+  left: 0;
+  background-color: #A592CB;
+  color: white;
+  font-weight: bold;
+}
+
+.call_to_action a {
+  size: 1rem;
+}
+
+#carousel {
+  background-color: #F4F4F4;
+}

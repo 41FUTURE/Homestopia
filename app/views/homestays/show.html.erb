@@ -1,0 +1,58 @@
+<div class="container-show">
+  <%= link_to "Go back ↩", homestays_path, class: 'card-back-link'%>
+  <div class="card-home-info">
+    <div class="card-home-photos">
+      <div class="home-maine-photo", style="background-image: url(<%=@homestay.photos.attached? ? cl_image_path(@homestay.photos.first.key) : @homestay.img_url %>);">
+      </div>
+      <div class="home-photos">
+        <div class="photo">
+          <% if @homestay.photos.count > 1 %>
+            <% @homestay.photos[1..-1].each do |photo| %>
+              <%= cl_image_tag(photo.key) %>
+            <% end %>
+          <% else %>
+            <%= image_tag('https://media.istockphoto.com/id/155666671/vector/vector-illustration-of-red-house-icon.jpg?s=612x612&w=0&k=20&c=tBqaabvmjFOBVUibZxbd8oWJqrFR5dy-l2bEDJMtZ40=')%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="card-home-description">
+      <h2> Location:
+        <%= @homestay.address %> </h2>
+      <div class="options">
+        <% @homestay.tag_list.each do |tag| %>
+          <p class="option"> <%= tag %> </p>
+        <% end %>
+      </div>
+      <p><strong>Type of accomodation:</strong> <%= @homestay.accomodation %></p>
+      <div>
+        <p><strong>A small comment about our home:</strong> <%= @homestay.comments %></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-owner-info">
+    <div class="card-booking-form">
+      <%= render 'bookings/form',homestay: @homestay,booking: @booking  %>
+    </div>
+    <div class="card-owner-information">
+      <div class="card-photo-name">
+        <div class="user-avatar", style="background-image: url(<%=@homestay.user.img_url %>);">
+        </div>
+        <div class="full-name">
+          <h2> <%= @homestay.user.first_name %>
+            <%= @homestay.user.last_name %>
+          </div>
+        </div>
+      </h2>
+      <div class="card-family-description">
+        <h2><strong> Age:</strong> <%= @homestay.user.age %> </h2>
+        <p><strong>Gender:</strong>  <%= @homestay.user.gender %> </p>
+        <p><strong>About the family:</strong> <%= @homestay.family_description %></p>
+        <p><strong>About myself: </strong><%= @homestay.user.description %></p>
+        <script>
+          src="app/javascript/controllers/image_modal_controller.js">
+        </script>
+      </div>
+    </div>
+  </div>
+</div>

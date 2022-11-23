@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <h1>Homestopia</h1>
+    <div class="typing-effect">
+      <p>Be with family anywhere in the world</p>
+    </div>
+    <%= link_to "Discover", homestays_path, class: "bubbly-button fw-bold" %>
+  </button>
+</div>
+</div>
+<div class="body py-4" id="home-body">
+  <div class="container">
+    <h2 class="align-text-center">Travel Around the World</h2>
+    <p class="align-text-center">Live with a local family and learn a new culture first-hand.</p>
+  </div>
+</div>
+<div class="d-flex justify-content-between" id="carousel">
+  <%= render "devise/shared/carousel" %>
+</div>

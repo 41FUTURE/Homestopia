@@ -1,0 +1,45 @@
+.form-container-homestay {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://nationaltoday.com/wp-content/uploads/2022/01/Family-Day-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 0 0 8px rgba($color: #8267b2, $alpha: 0.9);
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.form-container-homestay h1, .form-container-homestay p {
+  text-shadow: 0 0 8px white;
+}
+
+#new_homestay .f-container .btn {
+  background-color: rgba($color:#8267b2, $alpha: 0.1);
+  font-family: 'Hammersmith One', sans-serif;
+  box-shadow: 0 0 8px rgba($color: #8267b2, $alpha: 1.0);
+  border-radius: 25%;
+  padding: 8px;
+}
+#new_homestay .form-select {
+  background-color: rgba($color:#BE75D0, $alpha: 0.1);
+  font-family: 'Hammersmith One', sans-serif;
+  box-shadow: 0 0 8px rgba($color: #8267b2, $alpha: 1.0);
+}
+#new_homestay .form-control {
+width: 100%;
+}
+.form-container-homestay input, .form-container-homestay textarea{
+  border-radius: 16px;
+  box-shadow: 8px 8px 8px 0px rgba($color: #8267b2, $alpha: 1.0);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+ #homestay_tag_list_no_smoking, #homestay_tag_list_has_pets, #homestay_tag_list_no_pets, #homestay_tag_list_has_kids, #homestay_tag_list_no_kids {
+  padding: 0;
+}

@@ -9,11 +9,23 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 160px;
-  border-radius: 46px;
+  border-radius: 5px;
   background-color: #a592cb;
 }
 
 .search-bar {
   display: flex;
   gap: 0;
+  position: relative;
+
+  button {
+    position: absolute;
+    right: 5px;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    // border-left: 1px solid #ffffff75;
+  }
 }

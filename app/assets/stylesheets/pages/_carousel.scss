@@ -1,0 +1,19 @@
+  .carousel-container {
+    padding-inline: 20%;
+    background-color: #A592CB;
+  }
+
+  .carousel-item {
+    position: relative;
+
+    &::before{
+      position: absolute;
+      inset: 0;
+      background-color: #00000030;
+      content: "";
+    }
+  }
+
+  .card-img-overlay {
+    opacity: 75%;
+  }

@@ -1,0 +1,22 @@
+.filter {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  & button {
+    background-color: $purple;
+    padding: 8px 32px;
+    border-color: $purple;
+    color:white;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+}
+
+@media  (max-width: 900px) {
+  .filter {
+    width: 50%;
+  }
+}
