@@ -13,7 +13,9 @@
   background-color: #a592cb;
 }
 
-.searchbar {
+.search-bar {
+  display: flex;
+  gap: 0;
   position: relative;
 
   button {

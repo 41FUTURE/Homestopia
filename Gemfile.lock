@@ -296,7 +296,8 @@ DEPENDENCIES
   acts-as-taggable-on (~> 9.0)
   autoprefixer-rails
   bootsnap
-  bootstrap (~> 5.0.2)
+
+  bootstrap (~> 5.1.3)
   capybara
   cloudinary
   debug
