@@ -1,7 +1,13 @@
 
 # 📚 Homestopia
 
-Web app to find a homestay
+Homestopia is a marketplace web application that connects travelers with hosts who offer homestay experiences. With Homestopia, travelers can easily search for hosts in their desired destination and find a welcoming home to stay in. Hosts can create listings for their own properties and offer travelers a unique and authentic homestay experience.
+
+Homestopia is focused on building a community of hosts and travelers who share a love for travel and cultural exchange. The platform allows users to connect with each other, share their experiences, and build lasting relationships.
+
+Homestopia is designed to be user-friendly and intuitive, with a clean and modern user interface. The platform offers a range of features and tools to help hosts and travelers easily connect and communicate, such as messaging, booking, and review systems.
+
+Overall, Homestopia is a unique and innovative platform that enables travelers to find authentic and affordable homestay experiences, and helps hosts share their homes and cultural experiences with the world.
 ![image](https://user-images.githubusercontent.com/99112509/203449208-5435ce20-409a-451f-b68a-fc6c5517c312.png)
 ![image](https://user-images.githubusercontent.com/99112509/203449261-c4db9b76-6b4a-4274-900f-343af3ab4789.png)
 ![image](https://user-images.githubusercontent.com/99112509/203449288-79d5fa2a-742d-47ec-83e2-83007c4a6517.png)
