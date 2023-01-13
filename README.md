@@ -5,7 +5,7 @@ Homestopia is a marketplace web application that connects travelers with hosts w
 
 Homestopia is focused on building a community of hosts and travelers who share a love for travel and cultural exchange. The platform allows users to connect with each other, share their experiences, and build lasting relationships.
 
-Homestopia is designed to be user-friendly and intuitive, with a clean and modern user interface. The platform offers a range of features and tools to help hosts and travelers easily connect and communicate, such as messaging, booking, and review systems.
+it's designed to be user-friendly and intuitive, with a clean and modern user interface. The platform offers a range of features and tools to help hosts and travelers easily connect and communicate, such as messaging, booking, and review systems.
 
 Overall, Homestopia is a unique and innovative platform that enables travelers to find authentic and affordable homestay experiences, and helps hosts share their homes and cultural experiences with the world.
 ![image](https://user-images.githubusercontent.com/99112509/203449208-5435ce20-409a-451f-b68a-fc6c5517c312.png)
